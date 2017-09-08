@@ -18,6 +18,9 @@ def location(bot, update):
 
 def iridium(bot, update):
     update.message.reply_text(strings.IRIDIUM_STRING)
+    bot.send_photo(chat_id=update.message.chat_id, photo='http://i.imgur.com/rg4WqZN.jpg')
+    update.message.reply_text(strings.IRIDIUM_STRING2)
+    bot.send_photo(chat_id=update.message.chat_id, photo='http://i.imgur.com/D33NXxV.jpg')
 
 def get_help(bot, update):
     update.message.reply_text(strings.HELP_STRING)
