@@ -16,6 +16,7 @@ dp = updater.dispatcher
 dp.add_error_handler(error_callback)
 dp.add_handler(CommandHandler('start', func.start))
 dp.add_handler(CommandHandler('iridium', func.iridium))
+dp.add_handler(CommandHandler('what', func.what))
 dp.add_handler(CommandHandler('help', func.get_help))
 dp.add_handler(MessageHandler(Filters.location, func.location))
 
