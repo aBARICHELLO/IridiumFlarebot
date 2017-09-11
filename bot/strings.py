@@ -71,7 +71,7 @@ IRIDIUM_STRING2 = ("""Occasionally, an antenna reflects sunlight directly down a
 creating a predictable and quickly moving illuminated spot on the 
 surface below of about 10 km (6.2 mi) diameter. 
 To an observer this looks like a bright flash, or flare in the sky, with a 
-duration of a few seconds./
+duration of a few seconds.
 """)
 
 HEADER = "Time|Brightness|Altitude|Azimuth|Satellite|Distance to flare centre|Brightness at centre|Sun altitude"

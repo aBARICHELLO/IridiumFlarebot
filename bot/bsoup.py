@@ -1,5 +1,6 @@
 import requests
 import strings
+import func
 from bs4 import BeautifulSoup
 
 def soup(bot, update, lat, lon):
@@ -9,8 +10,8 @@ def soup(bot, update, lat, lon):
     table = soup.find("table", {"class": "standardTable"})
 
     i = 0
-    update.message.reply_text(strings.HEADER)
     try:
+        update.message.reply_text(strings.HEADER)
         for row in table.find_all("tr"):
             i+=1
             if i is 7:
@@ -21,5 +22,4 @@ def soup(bot, update, lat, lon):
                     result += cell.find(text=True) + " | "
                 update.message.reply_text(result)
     except AttributeError:
-        update.message.reply_text("Daily quota reached")
-        
+        update.message.reply_text("Daily quota reached")        
