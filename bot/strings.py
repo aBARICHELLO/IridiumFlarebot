@@ -1,6 +1,6 @@
 GREETING_TEXT = (""" Send me your location and i will reply with the next 5 visible 
 Iridium flares in your area. 
-For more information on flares try /iridium
+For more info on flares try /iridium
 For a glossary on location terms try /what
 """)
 
@@ -9,6 +9,16 @@ HELP_STRING = ("""
 /iridium - Learn what causes an Iridium flare
 /what - How to interpret the data provided by the bot
 /help - Shows a helpful block of text
+
+FAQ
+-What is an Iridium Flare?
+Try /iridium to learn more about satellite flares.
+
+-I've got some feedback. How do i get in touch with you?
+Contact me at @aBARICHELLO or try arturbarichello@hotmail.com
+
+-How can i contribute?
+https://www.github.com/abarichello/iridiumflarebot
 """)
 
 CONTRIBUTE_STRING = ("""
@@ -40,8 +50,13 @@ Examples:
     _+9.50_  - Faintests objects visible using common 7x50 binnoculars
 
 *Sun altitude* - The altitude of the sun in relation to the horizon. (Negative if sun is not visible)
-
 """)
+
+REMIND_MSG = ("Iridium flare starting soon!")
+
+USAGE_ERROR = ("Error. Usage example: /remindme Sep 12, 10:02:45")
+
+MINUTE_DELAY = 10
 
 IRIDIUM_STRING = ("""
 The Iridium constellation with 66 active telecommunication 
@@ -56,11 +71,11 @@ IRIDIUM_STRING2 = ("""Occasionally, an antenna reflects sunlight directly down a
 creating a predictable and quickly moving illuminated spot on the 
 surface below of about 10 km (6.2 mi) diameter. 
 To an observer this looks like a bright flash, or flare in the sky, with a 
-duration of a few seconds.
+duration of a few seconds./
 """)
 
 HEADER = "Time|Brightness|Altitude|Azimuth|Satellite|Distance to flare centre|Brightness at centre|Sun altitude"
 
-WORLD =     u'\U0001F30E'
+WORLD     = u'\U0001F30E'
 TELESCOPE = u'\U0001F52D'
 SATELLITE = u'\U0001F4E1'
