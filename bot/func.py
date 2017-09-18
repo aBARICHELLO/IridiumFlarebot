@@ -52,8 +52,20 @@ def remindme(bot, update, args, job_queue, chat_data): # Remind setter
         job = job_queue.run_once(reminder, delta, context=chat_id)
         chat_data['job'] = job
         update.message.reply_text(strings.SUCESSFULL_TIME)
-    except IndexError:
+    except (IndexError, ValueError):
         update.message.reply_text(strings.USAGE_ERROR)
+
+def unremindme(bot, update, chat_data):
+    if 'job' not in chat_data:
+        update.message.reply_text('You don\'t have a timer set!')
+        return
+    
+    job = chat_data['job']
+    job.schedule_removal()
+    del chat_data['job']
+
+    update.message.reply_text('You will no longer be reminded!')
+
 
 def get_help(bot, update):
     update.message.reply_text(strings.HELP_STRING)

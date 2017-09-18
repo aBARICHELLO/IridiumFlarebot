@@ -58,7 +58,7 @@ Examples:
 
 REMIND_MSG = (TELESCOPE + " Iridium flare starting soon!")
 
-USAGE_ERROR = ("Error. Usage example: /remindme Sep 12, 10:02:45")
+USAGE_ERROR = ("Error. Usage example: /remindme 2017 Sep 12 10:02:45")
 
 SECONDS_BEFORE = 600 # Seconds before event
 
