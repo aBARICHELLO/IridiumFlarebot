@@ -60,7 +60,11 @@ REMIND_MSG = (TELESCOPE + " Iridium flare starting soon!")
 
 USAGE_ERROR = ("Error. Usage example: /remindme Sep 12, 10:02:45")
 
-MINUTE_DELAY = 10
+SECONDS_BEFORE = 600 # Seconds before event
+
+SUCESSFULL_TIME = ("""
+Time set! You will be reminded 10 minutes before the next Iridium Flare
+""")
 
 IRIDIUM_STRING = ("""
 The Iridium constellation with 66 active telecommunication 
