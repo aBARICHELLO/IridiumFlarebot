@@ -1,3 +1,7 @@
+WORLD     = u'\U0001F30E'
+TELESCOPE = u'\U0001F52D'
+SATELLITE = u'\U0001F4E1'
+
 GREETING_TEXT = (""" Send me your location and i will reply with the next 5 visible 
 Iridium flares in your area. 
 For more info on flares try /iridium
@@ -52,7 +56,7 @@ Examples:
 *Sun altitude* - The altitude of the sun in relation to the horizon. (Negative if sun is not visible)
 """)
 
-REMIND_MSG = ("Iridium flare starting soon!")
+REMIND_MSG = (TELESCOPE + " Iridium flare starting soon!")
 
 USAGE_ERROR = ("Error. Usage example: /remindme Sep 12, 10:02:45")
 
@@ -76,6 +80,3 @@ duration of a few seconds.
 
 HEADER = "Time|Brightness|Altitude|Azimuth|Satellite|Distance to flare centre|Brightness at centre|Sun altitude"
 
-WORLD     = u'\U0001F30E'
-TELESCOPE = u'\U0001F52D'
-SATELLITE = u'\U0001F4E1'

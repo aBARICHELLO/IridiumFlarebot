@@ -33,21 +33,29 @@ def reminder(bot, job): # Reminder message
 
 def remindme(bot, update, args, job_queue, chat_data): # Remind setter
     chat_id = update.message.chat_id
-    today = datetime.now().strftime('%b %-d, %H:%M:%S')
-    update.message.reply_text(args)
-    today = today.replace(',:', '').split()
-    update.message.reply_text(today)
-
-    # TODO replace , and :
-    # after that calculate delta_day and delta_hour
-
+    
+    today = datetime.now()
+    args2 = args[2].replace(',', '')
     try:
-        time = int(args[0])
-        if time < 0:
-            update.message.reply_text('Invalid time')
+        args = f'{args[0]} {args[1]} {args2}, {args[3]}' #format received date
+    except IndexError:
+        update.message.reply_text(strings.USAGE_ERROR)
+    
+    # transform to datetime object
+    args = datetime.strptime(args, '%Y %b %d, %H:%M:%S') 
+    delta = (args - today).total_seconds()
+    print(args) 
+    print(today)
+    print(delta)
+    
+    try:
+        delta = int(delta)
+        if delta < 0:
+            update.message.reply_text('Negative data!')
             return
-        job = job_queue.run_once(reminder, time, context=chat_id)
+        job = job_queue.run_once(reminder, delta, context=chat_id)
         chat_data['job'] = job
+        update.message.reply_text('Time sucessfully set!')
     except (IndexError, ValueError):
         update.message.reply_text(strings.USAGE_ERROR)
 
