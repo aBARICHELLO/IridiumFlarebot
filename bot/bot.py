@@ -28,6 +28,6 @@ dp.add_handler(CommandHandler('what', func.what))
 dp.add_handler(CommandHandler('help', func.get_help))
 dp.add_handler(MessageHandler(Filters.location, func.location))
 
-updater.start_webhook(listen='0.0.0.0', port=config.PORT, url_path=config.TOKEN)
-updater.bot.setWebhook("https://" + config.APPNAME + ".herokuapp.com/" + config.TOKEN)
+updater.start_webhook(listen='0.0.0.0', port=config.PORT, url_path=config.BOT_TOKEN)
+updater.bot.setWebhook("https://" + config.APPNAME + ".herokuapp.com/" + config.BOT_TOKEN)
 updater.idle()
