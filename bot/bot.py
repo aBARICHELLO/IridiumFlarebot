@@ -23,10 +23,11 @@ dp.add_handler(CommandHandler('remindme', func.remindme,
     pass_args=True, pass_job_queue=True, pass_chat_data=True))
 dp.add_handler(CommandHandler('unremindme', func.unremindme,
     pass_chat_data=True))
-dp.add_handler(CommandHandler('next', func.remindnext))
+#dp.add_handler(CommandHandler('next', func.remindnext))
 dp.add_handler(CommandHandler('what', func.what))
 dp.add_handler(CommandHandler('help', func.get_help))
-dp.add_handler(MessageHandler(Filters.location, func.soup))
+dp.add_handler(MessageHandler(Filters.location, func.location))
 
-updater.start_polling()
+updater.start_webhook(listen='0.0.0.0', port=config.PORT, url_path=config.TOKEN)
+updater.bot.setWebhook("https://" + config.APPNAME + ".herokuapp.com/" + config.TOKEN)
 updater.idle()
