@@ -62,7 +62,7 @@ USAGE_ERROR = ("Error. Usage example: /remindme 2017 Sep 12 10:02:45")
 
 SECONDS_BEFORE = 600 # Seconds before event
 
-SECONDS_MAX = 2629800 # No further than a month
+SECONDS_MAX = 604800 # No further than a week
 
 SUCESSFULL_TIME = ("""
 Time set! You will be reminded 10 minutes before the next Iridium Flare
@@ -84,4 +84,6 @@ To an observer this looks like a bright flash, or flare in the sky, with a
 duration of a few seconds.
 """)
 
-HEADER = ['', 'Brightness: ', 'Altitude: ', 'Azimuth: ', 'Satellite: ', 'Distance to flare centre: ', 'Brightness at centre: ', 'Sun altitude: ']
+HEADER = "Here are the results for the next 7 days " + TELESCOPE
+
+COLUMN = ['', 'Brightness: ', 'Altitude: ', 'Azimuth: ', 'Satellite: ', 'Distance to flare centre: ', 'Brightness at centre: ', 'Sun altitude: ']

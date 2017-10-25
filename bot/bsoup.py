@@ -11,6 +11,7 @@ def soup(bot, update, lat, lon):
 
     i = 0
     try:
+        update.message.reply_text(strings.HEADER)
         for row in table.find_all("tr"):
             i += 1
             if i is 7:
@@ -19,7 +20,7 @@ def soup(bot, update, lat, lon):
                 result = ""
                 j = 0
                 for cell in row.find_all("td"):
-                    result += strings.HEADER[j] + cell.find(text=True) + "\n"
+                    result += strings.COLUMN[j] + cell.find(text=True) + "\n"
                     j += 1
                 update.message.reply_text(result)
     except AttributeError:
