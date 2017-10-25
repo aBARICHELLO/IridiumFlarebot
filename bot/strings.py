@@ -3,7 +3,7 @@ TELESCOPE = u'\U0001F52D'
 ANTENNA   = u'\U0001F4E1'
 SATELLITE = u'\U0001F6F0'
 
-GREETING_TEXT = (""" Send me your location and i will reply with the next 5 visible Iridium flares in your area.
+GREETING_TEXT = (""" Send me your location and I will reply with the next 5 visible Iridium flares in your area.
 For more info on flares try /iridium,
 For a glossary on location terms try /what
 """)
@@ -18,10 +18,10 @@ FAQ
 -What is an Iridium Flare?
 Try /iridium to learn more about satellite flares.
 
--I've got some feedback. How do i get in touch with you?
+-I've got some feedback. How do I get in touch with you?
 Contact me at @aBARICHELLO or try arturbarichello@hotmail.com
 
--How can i contribute?
+-How can I contribute?
 https://www.github.com/abarichello/iridiumflarebot
 """)
 
