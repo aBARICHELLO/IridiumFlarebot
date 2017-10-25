@@ -30,4 +30,5 @@ dp.add_handler(MessageHandler(Filters.location, func.location))
 
 updater.start_webhook(listen='0.0.0.0', port=config.PORT, url_path=config.BOT_TOKEN)
 updater.bot.setWebhook("https://" + config.APPNAME + ".herokuapp.com/" + config.BOT_TOKEN)
+# updater.start_polling()
 updater.idle()

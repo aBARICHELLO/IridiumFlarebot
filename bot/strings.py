@@ -4,7 +4,7 @@ ANTENNA   = u'\U0001F4E1'
 SATELLITE = u'\U0001F6F0'
 
 GREETING_TEXT = (""" Send me your location and i will reply with the next 5 visible Iridium flares in your area.
-For more info on flares try /iridium ,
+For more info on flares try /iridium,
 For a glossary on location terms try /what
 """)
 
@@ -84,5 +84,4 @@ To an observer this looks like a bright flash, or flare in the sky, with a
 duration of a few seconds.
 """)
 
-HEADER = "Time|Brightness|Altitude|Azimuth|Satellite|Distance to flare centre|Brightness at centre|Sun altitude"
-
+HEADER = ['', 'Brightness: ', 'Altitude: ', 'Azimuth: ', 'Satellite: ', 'Distance to flare centre: ', 'Brightness at centre: ', 'Sun altitude: ']
