@@ -67,4 +67,3 @@ def unremindme(bot, update, chat_data):
 
 def get_help(bot, update):
     update.message.reply_text(strings.HELP_STRING)
-    update.message.reply_text(strings.CONTRIBUTE_STRING)
