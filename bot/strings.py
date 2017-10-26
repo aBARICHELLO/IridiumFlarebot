@@ -25,10 +25,6 @@ Contact me at @aBARICHELLO or try arturbarichello@hotmail.com
 https://www.github.com/abarichello/iridiumflarebot
 """)
 
-CONTRIBUTE_STRING = ("""
-Contribute at: https://github.com/aBARICHELLO/IridiumFlarebot
-""")
-
 WHAT_STRING = ("""
 Glossary:
 *Altitude* - Angle between the horizon and the object in the sky (90º is the maximum, also called zenith)
@@ -84,6 +80,6 @@ To an observer this looks like a bright flash, or flare in the sky, with a
 duration of a few seconds.
 """)
 
-HEADER = "Here are the results for the next 7 days " + TELESCOPE
+HEADER = "Here are the results for the next 7 days " + TELESCOPE + " \nInterpret this info with /what"
 
 COLUMN = ['', 'Brightness: ', 'Altitude: ', 'Azimuth: ', 'Satellite: ', 'Distance to flare centre: ', 'Brightness at centre: ', 'Sun altitude: ']
