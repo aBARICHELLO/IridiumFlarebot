@@ -1,4 +1,5 @@
 from datetime import datetime
+from dateutil.parser import parse
 from telegram import ReplyKeyboardMarkup, KeyboardButton, ParseMode
 
 import strings
@@ -36,9 +37,9 @@ def remindme(bot, update, args, job_queue, chat_data): # Remind setter
 
     today = datetime.now()
     try:
-        args = f'{args[0]} {args[1]} {args[2]}, {args[3]}' #format received date
+        args = "".join(args)
 
-        args = datetime.strptime(args, '%Y %b %d, %H:%M:%S')
+        args = parse(args)
         delta = (args - today).total_seconds()
         print(args)
         print(today)
