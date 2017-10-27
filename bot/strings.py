@@ -57,7 +57,7 @@ REMIND_MSG = (SATELLITE + " Iridium flare starting soon!")
 REMIND_HELP = ("To get reminded forward the event timestamp or type it manually like this: \nOct 27, 18:51:30")
 
 SUCESSFULL_TIME = ("""
-Time set! You will be reminded 15 minutes before the next Iridium Flare
+Timer set! You will be reminded 15 minutes before the next Iridium Flare
 """)
 
 NO_TIMER = ('You don\'t have a timer set!')
