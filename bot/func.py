@@ -7,7 +7,7 @@ import bsoup
 import config
 
 def start(bot, update):
-    button = KeyboardButton(f"Send your location {strings.WORLD}",
+    button = KeyboardButton("Send your location {}".format(strings.WORLD),
         request_location=True)
     keyboard = ReplyKeyboardMarkup([[button]], resize_keyboard=True,
         one_time_keyboard=True)
@@ -56,7 +56,6 @@ def unremindme(bot, update, chat_data):
 
 def get_help(bot, update):
     update.message.reply_text(strings.HELP_STRING)
-
 
 def iridium(bot, update): # Iridium explanation
     update.message.reply_text(strings.IRIDIUM_STRING + strings.ANTENNA)

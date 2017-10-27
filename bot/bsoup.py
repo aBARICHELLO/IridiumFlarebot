@@ -4,7 +4,7 @@ import func
 from bs4 import BeautifulSoup
 
 def soup(bot, update, lat, lon):
-    url = f'http://heavens-above.com/IridiumFlares.aspx?lat={lat}&lng={lon}&loc=Unspecified&alt=189&tz=EBST'
+    url = 'http://heavens-above.com/IridiumFlares.aspx?lat={}&lng={}&loc=Unspecified&alt=189&tz=EBST'.format(lat, lon)
     req = requests.get(url).text
     soup = BeautifulSoup(req, 'html.parser')
     table = soup.find("table", {"class": "standardTable"})
