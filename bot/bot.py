@@ -19,16 +19,16 @@ job = updater.job_queue
 dp.add_error_handler(error_callback)
 dp.add_handler(CommandHandler('start', func.start))
 dp.add_handler(CommandHandler('iridium', func.iridium))
-dp.add_handler(CommandHandler('remindme', func.remindme,
-    pass_args=True, pass_job_queue=True, pass_chat_data=True))
+dp.add_handler(CommandHandler('remindme', func.remindme))
 dp.add_handler(CommandHandler('unremindme', func.unremindme,
     pass_chat_data=True))
-#dp.add_handler(CommandHandler('next', func.remindnext))
 dp.add_handler(CommandHandler('what', func.what))
 dp.add_handler(CommandHandler('help', func.get_help))
 dp.add_handler(MessageHandler(Filters.location, func.location))
+dp.add_handler(MessageHandler(Filters.all, func.forward, 
+    pass_job_queue=True, pass_chat_data=True))
 
-updater.start_webhook(listen='0.0.0.0', port=config.PORT, url_path=config.BOT_TOKEN)
-updater.bot.setWebhook("https://" + config.APPNAME + ".herokuapp.com/" + config.BOT_TOKEN)
-# updater.start_polling()
+#updater.start_webhook(listen='0.0.0.0', port=config.PORT, url_path=config.BOT_TOKEN)
+#updater.bot.setWebhook("https://" + config.APPNAME + ".herokuapp.com/" + config.BOT_TOKEN)
+updater.start_polling()
 updater.idle()

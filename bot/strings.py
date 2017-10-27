@@ -54,15 +54,17 @@ Examples:
 
 REMIND_MSG = (SATELLITE + " Iridium flare starting soon!")
 
-USAGE_ERROR = ("Error. Usage example: /remindme 2017 Sep 12 10:02:45")
-
-SECONDS_BEFORE = 600 # Seconds before event
-
-SECONDS_MAX = 604800 # No further than a week
+REMIND_HELP = ("To get reminded forward the event timestamp or type it manually like this: \nOct 27, 18:51:30")
 
 SUCESSFULL_TIME = ("""
-Time set! You will be reminded 10 minutes before the next Iridium Flare
+Time set! You will be reminded 15 minutes before the next Iridium Flare
 """)
+
+NO_TIMER = ('You don\'t have a timer set!')
+
+INVALID_DATE = ('Invalid date!')
+
+REMINDER_DELETE = ('You will no longer be reminded!')
 
 IRIDIUM_STRING = ("""
 The Iridium constellation with 66 active telecommunication

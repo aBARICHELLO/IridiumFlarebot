@@ -21,7 +21,12 @@ def soup(bot, update, lat, lon):
                 j = 0
                 for cell in row.find_all("td"):
                     result += strings.COLUMN[j] + cell.find(text=True) + "\n"
+                    if j is 0: # Send the timestamp as a different message
+                        update.message.reply_text(result)
+                        result = ""
                     j += 1
                 update.message.reply_text(result)
     except AttributeError:
-        update.message.reply_text("Daily quota reached")        
+        update.message.reply_text("Daily quota reached")
+
+    update.message.reply_text(strings.REMIND_HELP)
