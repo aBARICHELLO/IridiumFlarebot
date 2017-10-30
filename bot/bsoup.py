@@ -1,6 +1,5 @@
 import requests
 import strings
-import func
 from bs4 import BeautifulSoup
 
 def soup(bot, update, lat, lon):
