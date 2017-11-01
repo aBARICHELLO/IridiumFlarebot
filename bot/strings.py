@@ -43,7 +43,9 @@ Examples:
     _-9.50_  - Maximum brightness of an Iridium flare
     _-4.89_  - Venus as seen from Earth
     _-2.50_  - New Moon
+    _−1.46_  - Sirius (brightest star in the night sky)
     _+1.84_  - Planet Mars
+    _+2.8_   - Stars of the Southern Cross (Crux) constellation
     _+5.95_  - Planet Uranus
     _+6.5_   - Starts that can be observed with the naked eye
     _+8.02_  - Planet Neptune
