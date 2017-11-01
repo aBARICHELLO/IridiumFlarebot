@@ -3,7 +3,7 @@ import strings
 from bs4 import BeautifulSoup
 
 def soup(bot, update, lat, lon):
-    url = 'http://heavens-above.com/IridiumFlares.aspx?lat={}&lng={}&loc=Unspecified&alt=189&tz=EBST'.format(lat, lon)
+    url = 'http://heavens-above.com/IridiumFlares.aspx?lat={}&lng={}&loc=Unspecified&alt=25&tz=EBST'.format(lat, lon)
     req = requests.get(url).text
     soup = BeautifulSoup(req, 'html.parser')
     table = soup.find("table", {"class": "standardTable"})
