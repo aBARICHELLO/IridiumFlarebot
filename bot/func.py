@@ -37,14 +37,14 @@ def forward(bot, update, job_queue, chat_data): # Receive the timestamp and set 
         if delta < 0 or delta > config.SECONDS_MAX:
             update.message.reply_text(strings.INVALID_DATE)
             return
-        
+
         job = job_queue.run_once(reminder, delta, context=chat_id)
         chat_data['job'] = job
         update.message.reply_text(strings.SUCESSFULL_TIME)
     except (IndexError, ValueError):
         update.message.reply_text(strings.REMIND_HELP)
 
-def unremindme(bot, update, chat_data):
+def unremindme(bot, update, chat_data): # Remove reminders
     if 'job' not in chat_data:
         update.message.reply_text(strings.NO_TIMER)
         return

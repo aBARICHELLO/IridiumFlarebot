@@ -1,6 +1,6 @@
 from os import environ
 
-SECONDS_BEFORE = 900 # Seconds before event
+SECONDS_BEFORE = 900 # Seconds before event(15mins)
 
 SECONDS_MAX = 604800 # No further than a week
 

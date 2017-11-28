@@ -84,6 +84,6 @@ To an observer this looks like a bright flash, or flare in the sky, with a
 duration of a few seconds.
 """)
 
-HEADER = "Here are the results for the next 7 days " + TELESCOPE + " \nInterpret this info with /what"
+HEADER = "Here are the results for the next 7 days in UTC 00:00 (GMT)" + TELESCOPE + " \nInterpret this info with /what"
 
 COLUMN = ['', 'Brightness: ', 'Altitude: ', 'Azimuth: ', 'Satellite: ', 'Distance to flare centre: ', 'Brightness at centre: ', 'Sun altitude: ']
